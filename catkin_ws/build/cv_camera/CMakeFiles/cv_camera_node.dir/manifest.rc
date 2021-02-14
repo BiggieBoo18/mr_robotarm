@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Users/yahoo/hack/mr_robotarm/catkin_ws/build/cv_camera/CMakeFiles/cv_camera_node.dir/embed.manifest"

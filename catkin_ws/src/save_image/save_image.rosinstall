@@ -1,0 +1,1 @@
+- git: {local-name: cv_camera, uri: https://github.com/OTL/cv_camera.git, version: master}

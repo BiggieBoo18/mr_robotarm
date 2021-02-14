@@ -1,0 +1,8 @@
+prefix=C:/Users/yahoo/hack/mr_robotarm/catkin_ws/devel
+
+Name: save_image
+Description: Description of save_image
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/yahoo/hack/mr_robotarm/catkin_ws/build/button_status_receiver/catkin_generated/add_python_executable/button_status_receiver_button_status_receiver_node.py_exec_install_python/button_status_receiver_node.cpp
+fstream
+-
+iostream
+-
+string
+-
+windows.h
+-
+
