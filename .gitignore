@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# Backup files
+*.*~
+*.\#*
+\#*.*\#
+
+# Local data
+button_status.txt
+camera_image.jpg

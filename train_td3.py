@@ -43,7 +43,7 @@ def main():
     parser.add_argument(
         "--steps",
         type=int,
-        default=10 ** 6,
+        default=10,
         help="Total number of timesteps to train the agent.",
     )
     parser.add_argument(
@@ -67,10 +67,10 @@ def main():
     parser.add_argument(
         "--replay-start-size",
         type=int,
-        default=10000,
+        default=5,
         help="Minimum replay buffer size before " + "performing gradient updates.",
     )
-    parser.add_argument("--batch-size", type=int, default=100, help="Minibatch size")
+    parser.add_argument("--batch-size", type=int, default=5, help="Minibatch size")
     parser.add_argument("--gray", action="store_true", default=False, help="input gray image")
     parser.add_argument(
         "--render", action="store_true", help="Render env states in a GUI window."
@@ -136,11 +136,9 @@ def main():
     action_size = action_space.low.size
 
     policy = nn.Sequential(
-        nn.Linear(obs_size, 1500),
+        nn.Linear(obs_size, 400),
         nn.ReLU(),
-        nn.Linear(1500, 1000),
-        nn.ReLU(),
-        nn.Linear(1000, 300),
+        nn.Linear(400, 300),
         nn.ReLU(),
         nn.Linear(300, action_size),
         nn.Tanh(),
@@ -151,11 +149,7 @@ def main():
     def make_q_func_with_optimizer():
         q_func = nn.Sequential(
             pfrl.nn.ConcatObsAndAction(),
-            nn.Linear(obs_size + action_size, 1500),
-            nn.ReLU(),
-            nn.Linear(1500, 1000),
-            nn.ReLU(),
-            nn.Linear(1000, 400),
+            nn.Linear(obs_size + action_size, 400),
             nn.ReLU(),
             nn.Linear(400, 300),
             nn.ReLU(),

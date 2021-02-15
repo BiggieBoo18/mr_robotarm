@@ -87,8 +87,8 @@ void parse_command() {
   switch (type.toInt()) {
     case CMD_ANGLE1:
     {
-//      Serial.print("CMD_ANGLE1 ");
-//      Serial.println(angle);
+      Serial.print("CMD_ANGLE1 ");
+      Serial.println(angle);
       servos[0].write(angle);
       break;
     }
@@ -101,8 +101,8 @@ void parse_command() {
     }
     case CMD_ANGLE3:
     {
-//      Serial.print("CMD_ANGLE3 ");
-//      Serial.println(angle);
+      Serial.print("CMD_ANGLE3 ");
+      Serial.println(angle);
       servos[2].write(angle);
       break;
     }
